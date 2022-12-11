@@ -13,6 +13,13 @@ nav {
 
 footer {
     background-color: $color-secondary;
+    padding: 10px 0;
+}
+
+#mockup {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo {
@@ -40,6 +47,10 @@ footer {
     padding: 10px 40px;
     border-radius: 10px;
     color: $color-white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 p {
