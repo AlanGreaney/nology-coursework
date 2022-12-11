@@ -11,6 +11,10 @@ nav {
     }
 }
 
+footer {
+    background-color: $color-secondary;
+}
+
 .logo {
     font-family: $font-display;
     font-size: 20px;
@@ -28,6 +32,57 @@ nav {
     border: 1px solid $color-primary;
 }
 
+.button-inverted {
+    display: block;
+    width: 200px;
+    background-color: $color-primary;
+    text-align: center;
+    padding: 10px 40px;
+    border-radius: 10px;
+    color: $color-white;
+}
+
+p {
+    text-align: left;
+    color: $color-primary;
+    font-size: 15px;
+}
+
+h1, h2, h3, h4, h5 {
+    text-align: center;
+    display:block;
+}
+
+h1 {
+    color: $color-primary;
+    font-size: 30px;
+}
+
+h2 {
+    color: $color-bright-blue;
+    font-size: 25px;
+    margin: 25px 100px;
+}
+
+h3 {
+    color: $color-primary;
+    font-size: 20px;
+    margin: 25px 100px;
+}
+
+h4 {
+    color: $color-bright-blue;
+    font-size: 17px;
+    margin: 25px 100px;
+}
+
+h5 {
+    color: $color-primary;
+    font-size: 16px;
+    margin: 25px 100px;
+}
+
+/*
 div {
     text-align: center;
 
@@ -43,6 +98,7 @@ div {
     }
 
     a {
-        margin: 0 auto; /* 0 on top, auto on sides, which centers it */
+        margin: 0 auto;
     }
 }
+*/

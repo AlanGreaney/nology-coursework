@@ -26,6 +26,10 @@ nav img {
   height: 75px;
 }
 
+footer {
+  background-color: #FFFCDD;
+}
+
 .logo {
   font-family: "Dancing Script", cursive;
   font-size: 20px;
@@ -43,26 +47,92 @@ nav img {
   border: 1px solid #394166;
 }
 
-div {
+.button-inverted {
+  display: block;
+  width: 200px;
+  background-color: #394166;
   text-align: center;
-}
-div h1 {
-  color: #394166;
-  font-size: 50px;
-}
-div h2 {
-  font-family: "Dancing Script", cursive;
-  font-size: 25px;
-  margin: 20px 0;
-}
-div a {
-  margin: 0 auto;
-  /* 0 on top, auto on sides, which centers it */
+  padding: 10px 40px;
+  border-radius: 10px;
+  color: #fafafa;
 }
 
+p {
+  text-align: left;
+  color: #394166;
+  font-size: 15px;
+}
+
+h1, h2, h3, h4, h5 {
+  text-align: center;
+  display: block;
+}
+
+h1 {
+  color: #394166;
+  font-size: 30px;
+}
+
+h2 {
+  color: #5CCCF2;
+  font-size: 25px;
+  margin: 25px 100px;
+}
+
+h3 {
+  color: #394166;
+  font-size: 20px;
+  margin: 25px 100px;
+}
+
+h4 {
+  color: #5CCCF2;
+  font-size: 17px;
+  margin: 25px 100px;
+}
+
+h5 {
+  color: #394166;
+  font-size: 16px;
+  margin: 25px 100px;
+}
+
+/*
+div {
+    text-align: center;
+
+    h1 {
+        color: $color-primary;
+        font-size: 50px;
+    }
+
+    h2 {
+        font-family: $font-display;
+        font-size: 25px;
+        margin: 20px 0;
+    }
+
+    a {
+        margin: 0 auto;
+    }
+}
+*/
 header {
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+h1, h2, h3, h4, h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*#maincontent {
+    border: 1px solid red;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}*/
