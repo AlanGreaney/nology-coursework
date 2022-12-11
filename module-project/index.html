@@ -10,11 +10,11 @@
 <body>
     <nav>
         <div id="logo">
-            <img src="images/coolpenguin.png"> <!-- logo has different white background, would crop and change properly if had more time -->
-            <a href="http://greaney.net/" class="logo"><h1>DADA</h1></a>
+            <!-- logo has different white background, would crop and change properly if had more time -->
+            <a href="http://greaney.net/" class="logo"><h1><img id="upperLogo" src="images/coolpenguin.png"> DADA</h1></a>
         </div>
         <div id="login">
-            <a href="#" class="button">Login</a>
+            <a href="#" class="button"><b>Login</b></a>
         </div>
     </nav>
 
@@ -32,15 +32,21 @@
             <h3>Here you will find:</h3>
         </div>
 
-        <div>
-            <p><b>Low-effort activity ideas</b> to suit your mood and budget</p>
-            <img class="penguin" src="images/penguin1.svg">
-            <p><b>Fast and clear answers</b> to most common parenting challenges</p>
-            <img class="penguin" src="images/penguin2.svg">
-            <p><b>Cliff-notes</b> from top-rated parenting books <i>(because who has the time to read the whole thing?)</i></p>
-            <img class="penguin" src="images/penguin3.svg">
-            <p><b>Longer reads</b> for the SuperDads out there</p>
-            <img class="penguin" src="images/penguin4.svg">
+        <!-- the text isnt vertically centered -->
+        <!-- how other than float would put stuff side by side -->
+        <div> 
+            <div class="image-right">
+                <p><img class="penguin" src="images/penguin1.svg"><b>Low-effort activity ideas</b> to suit your mood and budget</p>
+            </div>
+            <div class="image-left">
+                <p><img class="penguin" src="images/penguin2.svg"><b>Fast and clear answers</b> to most common parenting challenges</p>
+            </div>
+            <div class="image-right">
+                <p><img class="penguin" src="images/penguin3.svg"><b>Cliff-notes</b> from top-rated parenting books <i>(because who has the time to read the whole thing?)</i></p>
+            </div>
+            <div class="image-left">
+                <p><img class="penguin" src="images/penguin4.svg"><b>Longer reads</b> for the SuperDads out there</p>
+            </div>
         </div>
 
         <a href="#" class="button-inverted">Sign Up</a>
@@ -51,13 +57,5 @@
         <a href="#" class="logo"><h3>Privacy</h3></a>
         <a href="#" class="logo"><h3>Terms</h3></a>
     </footer>
-
-    <!--<header>
-        <div>
-            <h1>Hello</h1>
-            <h2>Welcome to my website</h2>
-            <a href="#" class="button">scroll</a>
-        </div>
-    </header>-->
 </body>
 </html>

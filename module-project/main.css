@@ -51,27 +51,35 @@ footer {
   padding: 10px 20px;
   border-radius: 10px;
   color: #394166;
-  border: 1px solid #394166;
+  border: 2px solid #394166;
+}
+
+.image-left, .image-right {
+  height: 160px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+}
+
+.image-right img {
+  float: right;
+}
+
+.image-left img {
+  float: left;
 }
 
 .button-inverted {
-  display: block;
-  width: 200px;
   background-color: #394166;
-  text-align: center;
-  padding: 10px 40px;
-  border-radius: 10px;
   color: #fafafa;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
 }
 
 p {
   text-align: left;
   color: #394166;
   font-size: 15px;
+  width: 300px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -108,26 +116,6 @@ h5 {
   margin: 25px 100px;
 }
 
-/*
-div {
-    text-align: center;
-
-    h1 {
-        color: $color-primary;
-        font-size: 50px;
-    }
-
-    h2 {
-        font-family: $font-display;
-        font-size: 25px;
-        margin: 20px 0;
-    }
-
-    a {
-        margin: 0 auto;
-    }
-}
-*/
 header {
   height: 100px;
   display: flex;
@@ -141,9 +129,14 @@ h1, h2, h3, h4, h5 {
   align-items: center;
 }
 
-/*#maincontent {
-    border: 1px solid red;
-    display: block;
-    justify-content: center;
-    align-items: center;
-}*/
+.button-inverted {
+  display: block;
+  width: 200px;
+  text-align: center;
+  padding: 10px 40px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
