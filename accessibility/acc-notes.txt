@@ -1,0 +1,9 @@
+https://color.adobe.com/create/color-contrast-analyzer
+
+tapping: 48x48px, 8px apart
+
+https://www.w3.org/WAI/WCAG21/quickref/
+https://web.dev/accessibility/
+https://www.a11yproject.com/
+https://design-system.service.gov.uk/accessibility/
+https://webaim.org/resources/contrastchecker/

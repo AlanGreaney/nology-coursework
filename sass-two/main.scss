@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+$primary-color: orange;
+$secondary-color: darkgray;
+$tertiary-color: blue;
+$background-color: white;
+$secondary-background-color: lightgray;
+$main-text-color: black;
+
+$font-small: 1rem;
+$font-medium: 1.5rem;
+$font-large: 2rem;
+$font-secondary: Arial;
+
+$card-width: 500px;
+
+@mixin cleanLinks {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  font-family: "Playfair Display";
+}
+
+body {
+  background-color: $secondary-background-color;
+}
+
+.nav {
+  background-color: $secondary-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    margin-left: 5vw;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5vw;
+    li {
+      list-style: none;
+      a {
+        padding: 10px;
+        font-size: $font-small;
+        background-color: $secondary-color;
+        font-family: $font-secondary;
+        @include cleanLinks();
+      }
+      a:hover {
+        color: $background-color;
+        background-color: $main-text-color;
+      }
+    }
+  }
+}
+
+.card-holders, .travel-form-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.travelcard {
+  margin: 10px;
+  width: $card-width;
+  background-color: $background-color;
+  img {
+    width: $card-width;
+    height: $card-width * 0.75;
+    object-fit: cover;
+  }
+  h1 {
+    font-size: $font-large;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+  p {
+    margin-left: 20px;
+    height: 75px;
+  }
+  .button-holder {
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-top: 30px;
+    a {
+      margin: 10px;
+      padding: 10px;
+      @include cleanLinks();
+    }
+    .book {
+      background-color: $main-text-color;
+      color: $background-color;
+      border: 2px solid $main-text-color;
+    }
+    .book:hover {
+      background-color: $background-color;
+      color: $main-text-color;
+      border: 2px solid $main-text-color;
+    }
+    .info {
+      border: 2px solid $main-text-color;
+    }
+    .info:hover {
+      background-color: $main-text-color;
+      color: $background-color;
+      border: 2px solid $background-color;
+    }
+  }
+}
+
+
+
+form {
+  margin: 10px;
+  width: $card-width;
+  background-color: $background-color;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  .labels {
+    margin: 10px;
+  }
+
+  .combined-label {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  button {
+    margin: 20px;
+    font-size: $font-medium;
+  }
+}

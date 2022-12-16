@@ -1,0 +1,120 @@
+1
+international software testing qualifications board
+
+
+2 what is testing
+analysis + test design
+Test execution, and checking results
+bug and test reporting
+
+1. prevent defects - not just meeting requirements, but looking ahead to other issues. making sure requirements make sense (early)
+2. find defects
+3. secondary react to found issues by users
+4. evaluate if requirements met
+5. is it meeting what the customers wanted
+6. confidence in quality
+7. provide information (in regards to quality) (minor vs severe bugs)
+8. comply with contractual/legal/etc standards
+
+Testing (show failures/confirming fix) != Debugging (finding the reason and fixing them)
+
+
+3 why is testing necessary
+test techniques @ software lifecycle "appropriate points"
+- during requirement review, design, during code, testing/validating before release
+
+QM -> QA &~ QC
+QA - adherence to process, prevents, proactive
+QC - testing, design, execution - reactive, detect
+
+a Error: mistake in design/requirements
+b Defect: bug - built into software
+c Failure: software doesnt do what supposed to do, observed
+
+mistakes - pressure, human fallibility, inexperience/skill, complexity, misunderstanding, new-techniques
+
+Root cause vs effects - find root cause
+
+
+4 seven testing principles
+1. testing shows presence of defects, not absence
+no bugs found, no issues to reporting
+absence of evidence does not evidence of absence
+
+2. exhaustive testing is impossible
+combinatorial explosion
+test a representative protion vs risk analysis,
+
+3. early testing saves time and money
+
+4. defects cluster together
+test most problematic/newest area/logical reasoning
+
+5. pesticide paradox
+as existing tests find less bugs, review data + make new tests
+
+6. testing is context-dependent
+time, location, interests
+security important? (book club vs bank)
+must be knowledable specifically industry
+
+7. absence of errors is a fallacy
+durability testings
+even if many defects caught/fixed, not guaranteed success
+
+
+5 test process fundamentals
+testers also make mistakes
+no single correct test process - different approaches
+context has lots of influence, plus internal things
+similar activities
+7 principles
+planning - techniques, schedules, deadlines
+monitoring+control - plans vs actual, looping between steps, revising
+analysis - tests @ moment, looking at reports - revise
+test design and implementation - identify and prioritize test - HOW being tested - putting tests into place
+test execution (manual or auto)
+test completion (retrospective, archived)
+
+>> work products
+ - test plan, progess reports, summaries, traceable test cases, summary report
+traceability = keeping track of test cases, logging, governance, recording, keep for a certain time.
+
+6 test psychology
+big bad tester: reports bad news only. dev gets told they made mistake
+the critic: overly critical ("again", timing of how often)
+
+constructive, clear, informative bug reports - what when how - version, requirements, description, steps, expected result, actual result, screenshots/etc
+confirm understanding - soft skills
+
+confirmation bias
+no bugs until proven vs always has bugs
+devs dont want more work, tester thinks otherwise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

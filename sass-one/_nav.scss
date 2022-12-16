@@ -1,0 +1,13 @@
+@use 'variables';
+.nav {
+  background-color: $tertiary-color;
+  ul {
+    margin: 0px;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

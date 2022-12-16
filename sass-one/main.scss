@@ -1,0 +1,34 @@
+@use 'variables';
+@use 'nav';
+
+body {
+  background-color: darkred;
+}
+
+@mixin secondaryCenter {
+  font-size: doubleFont($font-large);
+  text-align: center;
+  color: $secondary-color;
+  background-color: $primary-color
+}
+
+@function doubleFont($arg) {
+  @return $arg * 2;
+}
+
+.banner h1 {
+  @include secondaryCenter();
+}
+
+.footer h3 {
+  @include secondaryCenter();
+}
+
+a {
+  font-size: $font-small;
+  background-color: $secondary-color;
+}
+
+p {
+  @extend a; /*classes only for extend*/
+}

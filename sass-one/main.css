@@ -1,0 +1,39 @@
+.nav {
+  background-color: orange;
+}
+.nav ul {
+  margin: 0px;
+}
+.nav ul li {
+  list-style: none;
+}
+.nav ul li a, .nav ul li p {
+  text-decoration: none;
+}
+
+body {
+  background-color: darkred;
+}
+
+.banner h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: gray;
+  background-color: orange;
+}
+
+.footer h3 {
+  font-size: 4rem;
+  text-align: center;
+  color: gray;
+  background-color: orange;
+}
+
+a, p {
+  font-size: 1rem;
+  background-color: gray;
+}
+
+p {
+  /*classes only for extend*/
+}/*# sourceMappingURL=main.css.map */

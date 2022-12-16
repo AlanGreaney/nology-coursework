@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+* {
+  font-family: "Playfair Display";
+}
+
+body {
+  background-color: lightgray;
+}
+
+.nav {
+  background-color: darkgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav h1 {
+  margin-left: 5vw;
+}
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5vw;
+}
+.nav ul li {
+  list-style: none;
+}
+.nav ul li a {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: darkgray;
+  font-family: Arial;
+  color: inherit;
+  text-decoration: none;
+}
+.nav ul li a:hover {
+  color: white;
+  background-color: black;
+}
+
+.card-holders, .travel-form-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.travelcard {
+  margin: 10px;
+  width: 500px;
+  background-color: white;
+}
+.travelcard img {
+  width: 500px;
+  height: 375px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.travelcard h1 {
+  font-size: 2rem;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+.travelcard p {
+  margin-left: 20px;
+  height: 75px;
+}
+.travelcard .button-holder {
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-top: 30px;
+}
+.travelcard .button-holder a {
+  margin: 10px;
+  padding: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+.travelcard .button-holder .book {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+}
+.travelcard .button-holder .book:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.travelcard .button-holder .info {
+  border: 2px solid black;
+}
+.travelcard .button-holder .info:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+form {
+  margin: 10px;
+  width: 500px;
+  background-color: white;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+form h2 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+form .labels {
+  margin: 10px;
+}
+form .combined-label {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+form button {
+  margin: 20px;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=main.css.map */

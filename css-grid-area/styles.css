@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #FAF9F6;
+}
+
+/*Desktop Size*/
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  "header header header header"
+  "image1 image3 image3 image2"
+  "image1 image3 image3 image2"
+  "image5 image5 image6 image4"
+  "image5 image5 image6 image7";
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+header {
+  grid-area: header;
+  background-color: #FAF9F6;
+  height: 5em;
+  font-size: 1em;
+  color: black;
+  font-family: "Playfair Display";
+
+  display: grid;
+  grid-template-areas:
+  "h1 filler filler work about contact";
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+#sandwich-menu {
+  grid-area: sandwich-menu;
+  display: none
+}
+
+header * {
+  padding: 5px;
+}
+
+h1 {
+  grid-area: h1;
+}
+
+.filler {
+  grid-area: filler;
+  width: 25vw;
+}
+
+#work {
+  grid-area: work;
+  color: gray;
+}
+
+#about {
+  grid-area: about;
+  color: gray;
+}
+
+#contact {
+  grid-area: contact;
+  color: gray;
+}
+
+#work:hover {
+  grid-area: work;
+  color: black;
+}
+
+#about:hover {
+  grid-area: about;
+  color: black;
+}
+
+#contact:hover {
+  grid-area: contact;
+  color: black;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+#image1 {
+  grid-area: image1;
+  max-width: 23vw;
+  height: 510px; 
+  object-fit: cover;
+}
+#image2 {
+  grid-area: image2;
+  max-width: 23vw;
+  height: 510px; 
+  object-fit: cover;
+}
+#image3 {
+  grid-area: image3;
+  width: 46vw;
+  height: 510px; 
+  object-fit: cover;
+}
+#image4 {
+  grid-area: image4;
+  max-width: 23vw;
+  height: 250px; 
+  object-fit: cover;
+}
+#image5 {
+  grid-area: image5;
+  width: 46vw;
+  height: 510px; 
+  object-fit: cover;
+}
+#image6 {
+  grid-area: image6;
+  max-width: 23vw;
+  height: 510px; 
+  object-fit: cover;
+}
+#image7 {
+  grid-area: image7;
+  max-width: 23vw;
+  height: 250px; 
+  object-fit: cover;
+}
+
+/*End Desktop Size*/
+
+
+/*Tablet Size*/
+
+@media screen and (max-width: 912px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "image1 image2"
+    "image1 image2"
+    "image3 image3"
+    "image3 image3"
+    "image4 image4"
+    "image5 image5"
+    "image6 image7"
+    "image6 image7";
+    grid-gap: 10px;
+    justify-content: center;
+  }
+  
+  header {
+    grid-area: header;
+    height: 5em;
+    font-size: 0.75em;
+    color: black;
+    font-family: "Playfair Display";
+  
+    display: grid;
+    grid-template-areas:
+    "h1 filler work about contact";
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .filler {
+    width: 12.5vw;
+  }
+
+  #sandwich-menu {
+    grid-area: sandwich-menu;
+    display: none
+  }
+
+  #image1 {
+    grid-area: image1;
+    width: 48vw;
+    max-width: initial;
+    height: 510px; 
+    max-height: initial;
+    object-fit: cover;
+  }
+  #image2 {
+    grid-area: image2;
+    width: 48vw;
+    max-width: initial;
+    height: 510px; 
+    max-height: initial;
+    object-fit: cover;
+  }
+  #image3 {
+    grid-area: image3;
+    width: 97vw;
+    max-width: initial;
+    height: 510px; 
+    max-height: initial;
+    object-fit: cover;
+  }
+  #image4 {
+    grid-area: image4;
+    width: 97vw;
+    max-width: initial;
+    height: initial; 
+    max-height: 250px; 
+    object-fit: cover;
+  }
+  #image5 {
+    grid-area: image5;
+    width: 97vw;
+    max-width: initial;
+    height: initial; 
+    max-height: 250px; 
+    object-fit: cover;
+  }
+  #image6 {
+    grid-area: image6;
+    width: initial;
+    max-width: 48vw;
+    height: 510px; 
+    max-height: initial;
+    object-fit: cover;
+  }
+  #image7 {
+    grid-area: image7;
+    width: initial;
+    max-width: 48vw;
+    height: 510px; 
+    max-height: initial;
+    object-fit: cover;
+  }
+}
+
+/*End Tablet Size*/
+
+
+
+
+/*Phone Size*/
+
+@media screen and (max-width: 667px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "image1"
+    "image2"
+    "image3"
+    "image4"
+    "image5"
+    "image6"
+    "image7";
+    grid-gap: 10px;
+    justify-content: center;
+  }
+  
+  header {
+    grid-area: header;
+    height: 5em;
+    font-size: 0.6em;
+    color: black;
+    font-family: "Playfair Display";
+  
+    display: grid;
+    grid-template-areas:
+    "h1 filler sandwich-menu";
+    grid-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1 {
+    margin-left: 25px;
+  }
+
+  #sandwich-menu {
+    display: initial;
+    margin-right: 25px;
+  }
+
+  .filler {
+    width: 12.5vw;
+  }
+
+  #work,  #about, #contact {
+    display: none;
+  }
+
+  #image1 {
+    grid-area: image1;
+    width: 98vw;
+    max-width: initial;
+    height: initial;
+    max-height: 510px; 
+    object-fit: cover;
+  }
+  #image2 {
+    grid-area: image2;
+    width: 98vw;
+    max-width: initial;
+    height: initial;
+    max-height: 510px; 
+    object-fit: cover;
+  }
+  #image3 {
+    grid-area: image3;
+    width: 98vw;
+    max-width: initial;
+    height: initial;
+    max-height: 510px; 
+    object-fit: cover;
+  }
+  #image4 {
+    grid-area: image4;
+    width: 98vw;
+    max-width: initial;
+    height: initial;
+    max-height: 510px; 
+    object-fit: cover;
+  }
+  #image5 {
+    grid-area: image5;
+    width: 98vw;
+    max-width: initial;
+    height: initial;
+    max-height: 510px; 
+    object-fit: cover;
+  }
+  #image6 {
+    grid-area: image6;
+    width: 98vw;
+    max-width: initial;
+    height: initial;
+    max-height: 510px; 
+    object-fit: cover;
+  }
+  #image7 {
+    grid-area: image7;
+    width: 98vw;
+    max-width: initial;
+    height: initial;
+    max-height: 510px; 
+    object-fit: cover;
+  }
+}
+
+/*End Phone Size*/

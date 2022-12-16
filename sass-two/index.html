@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="main.css" />
+    <title>SASS Variables</title>
+  </head>
+  <body>
+      <nav class="nav">
+        <h1>Budget Travel Experiences</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="travel-form-holder">
+        <form>
+            <h2>Direct Search</h2>
+
+            <label class="labels" for="fName">Name</label>
+            <input type="text" name="fName" id="fName">
+
+            <label class="labels" for="departure">Departure Location</label>
+            <input type="text" name="departure" id="departure">
+
+            <label class="labels" for="arrival">Arrival Location</label>
+            <input type="text" name="arrival" id="arrival">
+
+            <div class="combined-label">
+                <label class="labels" for="luggage">Luggage treated poorly?</label>
+                <input type="checkbox" name="luggage" id="luggage" checked tabindex="-1">
+            </div>
+
+            <label class="labels" for="babies">Number of crying babies on flight:</label>
+            <input type="number" name="babies" id="babies" min="1" value="3">
+
+            <button type="submit" id="submitButton">Resign to experience</button>
+        </form>
+
+      </div>
+
+      <div class="card-holders">
+        <section class="travelcard">
+            <img src="images/detroit.jpg">
+            <h1>Detroit, USA</h1>
+            <p>It's not that bad, really. This picture is from 2008, we promise.</p>
+            <div class="button-holder">
+                <a class="book" href="#">Book Now</a>
+                <a class="info" href="#">More Info</a>
+            </div>
+        </section>
+
+        <section class="travelcard">
+            <img src="images/peckham.jpg">
+            <h1>Peckham, London</h1>
+            <p>Outdoor experence in the heart of London. The fun and budget friendly camping experience with all the close-by comforts of the big city just out the door... well, if it had one.</p>
+            <div class="button-holder">
+                <a class="book" href="#">Book Now</a>
+                <a class="info" href="#">More Info</a>
+            </div>
+        </section>
+
+        <section class="travelcard">
+            <img src="images/bunks.jfif">
+            <h1>Undisclosed, USA</h1>
+            <p>A true budget experience - the United States Military will PAY you to travel! Accommodations are light on anemities, perfect for the backpacker among your family.</p>
+            <div class="button-holder">
+                <a class="book" href="#">Book Now</a>
+                <a class="info" href="#">More Info</a>
+            </div>
+        </section>
+
+        <section class="travelcard">
+            <img src="images/russia.jfif">
+            <h1>Russia</h1>
+            <p>Hostel style rooms. Doorless construction for true ambiance as the locals live. Recommended for heavy sleepers only.</p>
+            <div class="button-holder">
+                <a class="book" href="#">Book Now</a>
+                <a class="info" href="#">More Info</a>
+            </div>
+        </section>
+
+        <section class="travelcard">
+            <img src="images/japan.jpg">
+            <h1>Japan</h1>
+            <p>Travelling alone? Pick this option to garuntee making new friends during your stay. Wallet-friendly multi-person rooms provide a unique experience of travel how is was back in the olden days.</p>
+            <div class="button-holder">
+                <a class="book" href="#">Book Now</a>
+                <a class="info" href="#">More Info</a>
+            </div>
+        </section>
+    </div>
+  </body>
+</html>
