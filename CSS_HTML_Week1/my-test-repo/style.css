@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Source+Sans+Pro&display=swap');
+
+h1 {
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    color: purple;
+}
+
+h2 {
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    color: darkslategray;
+}
+
+p {
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+}
+
+h2:hover {
+    color: green;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+#coollink:hover {
+    color: pink;
+}
+
+#coollink:active {
+    color: green;
+}
