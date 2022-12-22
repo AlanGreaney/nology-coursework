@@ -1,3 +1,5 @@
+--- Fundamentals of Testing ---
+
 1
 international software testing qualifications board
 
@@ -96,15 +98,63 @@ devs dont want more work, tester thinks otherwise
 
 
 
+--- Testing throughout the Software Development Lifecycle ---
+
+SDLC - systematic plan
+basis for planing control, knows role, costs/speed
+model activity stage chronologically
+
+waterfall -> fully sequential
+v model - testing during development
+
+component (unit or module), integration (two+ components), system (whole, with everything together, with other stuff), acceptable(end user UAT, OAT operation acceptance testing)
+Alpha = on dev
+beta = on user environment
+
+functional
+unit, integration, [system, ui]-acceptance testing
+non functional
+usability, performance, security
+
+blackbox - unknown design
+
+
+
+
+--- Static Testing ---
+testing before coding to an extent, reviewing requirements
+review work products - internal company stuff
+inefficiencies
+coding standards
+
+review process - plan initiation prepare meet fix
+review types: informal, walkthrough, technical, inspection
+communicate, assign, evaluate, decision
+
+author, leader, facilitator, reviewer, scribe, management
+lfarms
 
 
 
 
 
+--- Test Techniques ---
+transition testing
+whitebox blackbox
+actor = thing that interacts, user/hardware/api
+statemnt testing / flow charts / direct things from code, just the ifs
+decision - all possible outputs
+
+error - using experience to find issues
+checklist - conditions list, varied input at times
+exploratory testing - informal, documenting, review
 
 
 
 
+--- Test Management ---
+SPACE
+risk based
 
 
 
