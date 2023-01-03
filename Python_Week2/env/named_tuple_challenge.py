@@ -1,4 +1,5 @@
 from collections import namedtuple
+import sys
 
 Pen = namedtuple("Pen", "size inkcolor beveled")
 
@@ -12,6 +13,7 @@ print(penThree._asdict())
 
 print("Pen - Size:" + str(penOne.size) + ", Ink Color: " + penOne.inkcolor + ", Bevelling: " + str(penOne.beveled))
 
+#print(sys.argv)
 
 print("-")
 print("-")
