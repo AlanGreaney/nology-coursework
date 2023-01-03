@@ -1,3 +1,5 @@
+import io
+import csv
 import sys
 import math
 import time
@@ -6,10 +8,37 @@ import datetime
 import textAdventureFormatting
 import textAdventureSceneLoader
 
-logging.basicConfig(filename = "quest.log", level=logging.DEBUG)
-
 def loggingWrapper(text):
-    logging.info(str(datetime.datetime.now()) + " -- " + text)
+    loggingCsv.info(text)
+    loggingLog.info(str(datetime.datetime.now()) + " -- " + text)
+
+class csvFormatter(logging.Formatter):
+    def __init__(self):
+        super().__init__()
+        self.output = io.StringIO()
+        self.writer = csv.writer(self.output, quoting=csv.QUOTE_ALL)
+
+    def format(self, record):
+        self.writer.writerow([record.levelname, datetime.datetime.now(), record.msg])
+        data = self.output.getvalue()
+        self.output.truncate(0)
+        self.output.seek(0)
+        return data.strip()
+
+def setup_logger(name, log_file, formatter = False, level=logging.INFO):
+    handler = logging.FileHandler(log_file)        
+
+    if formatter:
+        handler.setFormatter(formatter)
+
+    logger = logging.getLogger(name)
+    logger.setLevel(level)
+    logger.addHandler(handler)
+
+    return logger
+
+loggingCsv = setup_logger("loggingCsv", "logger.csv", csvFormatter())
+loggingLog = setup_logger("loggingLog", "logger.log")
 
 def inputWrapper(text):
     gameState.lastRepeated = ""
@@ -95,7 +124,7 @@ def doTurn():
             #scene specific actions
             if scene.sceneCode == 0:
                 gameState.inventory["weapon"] = (option.name.lower().replace("excalibur", "knife").capitalize())
-                loggingWrapper("Added:" + option.name.capitalize() + " to player inventory")
+                loggingWrapper("Added: '" + option.name.capitalize() + "' to player inventory")
 
 gameState = gameState("Sir Arthur", "easy")
 
@@ -119,7 +148,7 @@ def main():
         gameState.lastRepeated = textAdventureFormatting.gamePrint("Since it seems you cannot even pick between 3 clear options easily, we'll set the difficulty to easy for you, sire.", "!", gameState.lastRepeated)
 
     loggingWrapper("Game initialized with name: " + gameState.name + " and difficulty lives at: " + str(gameState.hp))
-    textAdventureFormatting.delay(1, 15)
+    textAdventureFormatting.delay(1, 1)
     inputWrapper("Hit \"Enter\" to continue... ")
     textAdventureFormatting.delay(1, 15)
 
