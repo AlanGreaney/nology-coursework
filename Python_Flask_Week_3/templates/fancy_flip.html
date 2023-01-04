@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIG COIN FLIPPER</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+{% set coinCount = request.form['coinCount'] | int if request.form['coinCount'] else 8  %}
+
+<body>
+  <header>
+    <nav>
+      <div id="logo">FLIPPER HEAVEN DOT COM</div>
+      <div id="navigation-items">
+        <a href="fancy_flip">COINS</a>
+        <a href="https://www.mcdonalds.com/us/en-us/mcdonalds-careers.html">BURGERS</a>
+        <a href="https://www.merriam-webster.com/dictionary/disappointed">TURTLES</a>
+        <div id="profile-section">
+          <img src="{{url_for('static', filename='spatula.png')}}" class="small-image">
+          <a href="#">Profile</a>
+        </div>
+      </div>
+    </nav>
+    
+    <div id="searchbar">
+        <img src="{{url_for('static', filename='filter.png')}}" class="small-image">
+        <p>Search: <input type="search" id="site-search"></p>
+        <form method="post" action="/fancy_flip">
+            <p>How many to flip:
+                <select name="coinCount" id="coinCount">
+                    {%for i in range(1, 9)%}
+                        <option value="{{i}}" {% if coinCount == i %}selected{% endif %}>{{i}} {% if i == 1 %}Coin{% else %}Coins{% endif %}</option>
+                    {%endfor%}
+                    
+                    {#<!-- old non-repeating method left as example to show how cumbersome it is
+                    <option value="1" {% if coinCount == 1 %}selected{% endif %}>1 Coin</option>
+                    <option value="2" {% if coinCount == 2 %}selected{% endif %}>2 Coins</option>
+                    <option value="3" {% if coinCount == 3 %}selected{% endif %}>3 Coins</option>
+                    <option value="4" {% if coinCount == 4 %}selected{% endif %}>4 Coins</option>
+                    <option value="5" {% if coinCount == 5 %}selected{% endif %}>5 Coins</option>
+                    <option value="6" {% if coinCount == 6 %}selected{% endif %}>6 Coins</option>
+                    <option value="7" {% if coinCount == 7 %}selected{% endif %}>7 Coins</option>
+                    <option value="8" {% if coinCount == 8 %}selected{% endif %}>8 Coins</option>
+                    -->#}
+                </select>
+            </p>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+  </header>
+  <main>
+    <div id="upper-image-container">
+        {%for i in range(1, coinCount+1)%}
+            <div class="image-holder">
+                <h1>Coin {{i}}</h1>
+                <h2>Outcome:</2>
+                <div class="contained-image"><img src="{{url_for('static', filename=coinOutcomes[i-1] + '.png')}}" class="large-image"></div>
+                <p>{{coinOutcomes[i-1]}}</p>
+            </div>
+        {%endfor%}
+
+        {#<!-- old non-repeating method left as example to show how cumbersome it is
+      <div class="image-holder">
+        <h1>Coin 1</h1>
+        <h2>Outcome:</2>
+        <div class="contained-image"><img src="{{url_for('static', filename=coin1outcome + '.png')}}" class="large-image"></div>
+        <p>{{coin1outcome}}</p>
+      </div>
+      {%- if coinCount >= 2 -%}
+      <div class="image-holder">
+        <h1>Coin 2</h1>
+        <h2>Outcome:</2>
+        <div class="contained-image"><img src="{{url_for('static', filename=coin2outcome + '.png')}}" class="large-image"></div>
+        <p>{{coin2outcome}}</p>
+      </div>
+      {%- endif %}
+      {%- if coinCount >= 3 -%}
+      <div class="image-holder">
+        <h1>Coin 3</h1>
+        <h2>Outcome:</2>
+        <div class="contained-image"><img src="{{url_for('static', filename=coin2outcome + '.png')}}" class="large-image"></div>
+        <p>{{coin2outcome}}</p>
+      </div>
+      {%- endif %}
+      {%- if coinCount >= 4 -%}
+      <div class="image-holder">
+        <h1>Coin 4</h1>
+        <h2>Outcome:</2>
+        <div class="contained-image"><img src="{{url_for('static', filename=coin3outcome + '.png')}}" class="large-image"></div>
+        <p>{{coin3outcome}}</p>
+      </div>
+      {%- endif %}
+      {%- if coinCount >= 5 -%}
+      <div class="image-holder">
+        <h1>Coin 5</h1>
+        <h2>Outcome:</2>
+        <div class="contained-image"><img src="{{url_for('static', filename=coin5outcome + '.png')}}" class="large-image"></div>
+        <p>{{coin5outcome}}</p>
+      </div>
+      {%- endif %}
+      {%- if coinCount >= 6 -%}
+      <div class="image-holder">
+        <h1>Coin 6</h1>
+        <h2>Outcome:</2>
+        <div class="contained-image"><img src="{{url_for('static', filename=coin6outcome + '.png')}}" class="large-image"></div>
+        <p>{{coin6outcome}}</p>
+      </div>
+      {%- endif %}
+      {%- if coinCount >= 7 -%}
+      <div class="image-holder">
+        <h1>Coin 7</h1>
+        <h2>Outcome:</2>
+        <div class="contained-image"><img src="{{url_for('static', filename=coin7outcome + '.png')}}" class="large-image"></div>
+        <p>{{coin7outcome}}</p>
+      </div>
+      {%- endif %}
+      {%- if coinCount >= 8 -%}
+      <div class="image-holder">
+        <h1>Coin 8</h1>
+        <h2>Outcome:</2>
+        <div class="contained-image"><img src="{{url_for('static', filename=coin8outcome + '.png')}}" class="large-image"></div>
+        <p>{{coin8outcome}}</p>
+      </div>
+      {%- endif %}
+    -->#}
+    </div>
+  </main>
+</body>
+</html>
