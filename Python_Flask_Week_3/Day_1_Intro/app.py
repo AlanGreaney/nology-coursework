@@ -53,8 +53,13 @@ def fancy_flip():
     """
 
 
+
+
+
+
+
 #make env:
-#py -m venv .env
+#python -m venv .env
 
 #set source:
 #source "C:\Users\frien\Documents\nology\nology-coursework\Python_Flask_Week_3\.env\Scripts\activate"
@@ -65,11 +70,18 @@ def fancy_flip():
 
 #"C:\Users\frien.pyenv\pyenv-win\bin\pyenv" local
 
+#will probably need to install flask again
+#pip install flask
+
 #set FLASK_APP=app.py
 #flask --debug run" or "python -m flask run"
 
 #for output: #print(chance, file=sys.stderr)
 
+#export FLASK_DEBUG=1
+
+
+#pip install -r requirements.txt
 
 """
 @app.route("/")

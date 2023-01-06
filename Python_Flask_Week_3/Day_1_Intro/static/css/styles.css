@@ -101,6 +101,7 @@ input {
 
 main {
   display: block;
+  margin-bottom: 30px;
 }
 
 #panel-holder {
@@ -147,14 +148,19 @@ main {
 
 h1 {
   font-size: max(2.5vw, 24px);
+  margin: 3px;
 }
 
 h2 {
   font-size: max(1.75vw, 17.5px);
+  margin-top: -10px;
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
 
 .image-holder p {
   font-size: max(1vw, 10px);
+  margin: 5px;
 }
 
 #left-panel {

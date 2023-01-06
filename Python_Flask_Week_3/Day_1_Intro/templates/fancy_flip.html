@@ -46,7 +46,7 @@
                     -->#}
                 </select>
             </p>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Re-Flip">
         </form>
     </div>
   </header>
@@ -55,7 +55,7 @@
         {%for i in range(1, coinCount+1)%}
             <div class="image-holder">
                 <h1>Coin {{i}}</h1>
-                <h2>Outcome:</2>
+                <h2>Outcome:</h2>
                 <div class="contained-image"><img src="{{url_for('static', filename=coinOutcomes[i-1] + '.png')}}" class="large-image"></div>
                 <p>{{coinOutcomes[i-1]}}</p>
             </div>
