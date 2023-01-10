@@ -138,6 +138,31 @@ def get_room_average(room_id):
 
 
 
+@app.get("/api/compare_rooms")
+def compare_rooms():
+
+    room1Id = request.args.get('room1')
+    room2Id = request.args.get('room2')
+
+    with connection:
+        with connection.cursor() as cursor:
+            cursor.execute(GET_ROOM_BY_ID, (room1Id,))
+            room1Name = cursor.fetchone()[1].capitalize()
+            cursor.execute(GET_ROOM_BY_ID, (room2Id,))
+            room2Name = cursor.fetchone()[1].capitalize()
+
+            cursor.execute(GET_AVG_OF_ROOM, (room1Id,))
+            averageRoom1 = cursor.fetchone()[0]
+            cursor.execute(GET_AVG_OF_ROOM, (room2Id,))
+            averageRoom2 = cursor.fetchone()[0]
+
+    warmer = room1Name if averageRoom1 > averageRoom2 else room2Name
+    return "Average Tempature for #" + str(room1Id) + " '" + room1Name + "': " + str(round(averageRoom1, 2)) + " --- Average Tempature for #" + str(room2Id) + " '" + room2Name + "': " + str(round(averageRoom2, 2)) + " --- " + warmer + " tends to be the warmer room.", 200
+
+
+
+
+
 @app.get("/api/get_averages")
 def get_averages():
 

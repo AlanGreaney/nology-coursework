@@ -1,0 +1,18 @@
+E2E - workflow from beginning to end
+integration - test a whole subsystem
+unit test - small code piece
+
+unit -> integration -> E2E
+smallest pieces -> biggest pieces
+
+Unit:
+- individual unit/part/module
+- not connection of others
+- dev dependent, not used in live (not packaged for prod)
+-- dev dependency = application only needs during dev, such as PyTest import'
+
+
+naming convention test_NAME.py for file, for functions test_FUNCTION_NAME()
+
+
+

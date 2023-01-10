@@ -1,0 +1,117 @@
+2023-01-09 15:31:44.430487 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-09 15:32:58.448100 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-09 15:32:59.448916 -- Made choice: Sword and moving to scene #1
+2023-01-09 15:32:59.448916 -- Added: 'Sword' to player inventory
+2023-01-09 15:34:02.788058 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-09 15:34:03.789005 -- Made choice: Sword and moving to scene #1
+2023-01-09 15:34:03.789005 -- Added: 'Sword' to player inventory
+2023-01-09 15:35:02.732809 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-09 15:35:03.733737 -- Made choice: Sword and moving to scene #1
+2023-01-09 15:35:03.733737 -- Added: 'Sword' to player inventory
+2023-01-09 15:35:26.972847 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-09 15:35:27.973774 -- Made choice: Sword and moving to scene #1
+2023-01-09 15:35:27.973774 -- Added: 'Sword' to player inventory
+2023-01-09 15:36:33.393970 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-09 15:36:34.394749 -- Made choice: Sword and moving to scene #1
+2023-01-09 15:36:34.394749 -- Added: 'Sword' to player inventory
+2023-01-09 15:36:39.186794 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-09 15:36:40.187698 -- Made choice: Sword and moving to scene #1
+2023-01-09 15:36:40.187698 -- Added: 'Sword' to player inventory
+2023-01-09 15:42:16.181771 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-09 15:42:17.182633 -- Made choice: Sword and moving to scene #1
+2023-01-09 15:42:17.182633 -- Added: 'Sword' to player inventory
+2023-01-09 15:42:47.547311 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-09 15:42:48.547973 -- Made choice: Sword and moving to scene #1
+2023-01-09 15:42:48.547973 -- Added: 'Sword' to player inventory
+2023-01-09 15:43:14.674510 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-09 15:43:15.675579 -- Made choice: Sword and moving to scene #1
+2023-01-09 15:43:15.675579 -- Added: 'Sword' to player inventory
+2023-01-09 15:45:11.281835 -- Game initialized with name: NAME IS BIG and difficulty lives at: 5
+2023-01-09 15:45:14.702919 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-09 15:45:18.176989 -- Made choice: Sword and moving to scene #1
+2023-01-09 15:45:18.176989 -- Added: 'Sword' to player inventory
+2023-01-09 15:45:22.036792 -- Arrived at: #1 - Outlying Lands - Player HP: 5
+2023-01-09 15:45:25.146493 -- Made choice: Plains and moving to scene #2
+2023-01-09 15:45:27.679846 -- Arrived at: #2 - plains_rt1 - Player HP: 5
+2023-01-09 15:47:58.308881 -- Game initialized with name: fmdkfsmdd and difficulty lives at: 5
+2023-01-09 15:48:01.058898 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-09 15:48:04.458853 -- Made choice: Sword and moving to scene #1
+2023-01-09 15:48:04.458853 -- Added: 'Sword' to player inventory
+2023-01-09 15:48:06.306734 -- Arrived at: #1 - Outlying Lands - Player HP: 5
+2023-01-09 15:48:08.504099 -- Made choice: Plains and moving to scene #2
+2023-01-09 15:48:12.153484 -- Arrived at: #2 - plains_rt1 - Player HP: 5
+2023-01-10 08:10:25.258060 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 08:10:26.265239 -- Made choice: Sword and moving to scene #1
+2023-01-10 08:10:26.265239 -- Added: 'Sword' to player inventory
+2023-01-10 08:10:43.172721 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 08:10:44.173459 -- Made choice: Sword and moving to scene #1
+2023-01-10 08:10:44.173459 -- Added: 'Sword' to player inventory
+2023-01-10 08:12:38.887813 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 08:12:39.888298 -- Made choice: Sword and moving to scene #1
+2023-01-10 08:12:39.888298 -- Added: 'Sword' to player inventory
+2023-01-10 08:12:54.278343 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 08:12:55.278993 -- Made choice: Sword and moving to scene #1
+2023-01-10 08:12:55.278993 -- Added: 'Sword' to player inventory
+2023-01-10 08:14:39.913903 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 08:14:40.915276 -- Made choice: Sword and moving to scene #1
+2023-01-10 08:14:40.915276 -- Added: 'Sword' to player inventory
+2023-01-10 08:14:40.917757 -- Testing Log @ 1673367280.9172618
+2023-01-10 08:26:38.172662 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 08:26:39.173636 -- Made choice: Sword and moving to scene #1
+2023-01-10 08:26:39.174127 -- Added: 'Sword' to player inventory
+2023-01-10 08:26:39.176111 -- Testing Log @ 1673367999.1761112
+2023-01-10 08:26:47.519715 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 08:26:48.520637 -- Made choice: Sword and moving to scene #1
+2023-01-10 08:26:48.520637 -- Added: 'Sword' to player inventory
+2023-01-10 08:26:48.523114 -- Testing Log @ 1673368008.523114
+2023-01-10 08:26:58.140524 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 08:26:59.141469 -- Made choice: Sword and moving to scene #1
+2023-01-10 08:26:59.141469 -- Added: 'Sword' to player inventory
+2023-01-10 08:26:59.143453 -- Testing Log @ 1673368019.1434536
+2023-01-10 08:27:45.117934 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 08:27:46.118607 -- Made choice: Sword and moving to scene #1
+2023-01-10 08:27:46.118607 -- Added: 'Sword' to player inventory
+2023-01-10 08:27:46.120592 -- Testing Log @ 1673368066.1205924
+2023-01-10 08:28:28.698916 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 08:28:29.699976 -- Made choice: Sword and moving to scene #1
+2023-01-10 08:28:29.699976 -- Added: 'Sword' to player inventory
+2023-01-10 08:28:29.702953 -- Testing Log @ 1673368109.702953
+2023-01-10 08:28:56.619338 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 08:28:57.620532 -- Made choice: Sword and moving to scene #1
+2023-01-10 08:28:57.620532 -- Added: 'Sword' to player inventory
+2023-01-10 08:28:57.623011 -- Testing Log @ 1673368137.6230116
+2023-01-10 08:29:18.027935 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 08:29:19.029028 -- Made choice: Sword and moving to scene #1
+2023-01-10 08:29:19.029028 -- Added: 'Sword' to player inventory
+2023-01-10 08:29:19.031507 -- Testing Log @ 1673368159.031012
+2023-01-10 10:17:56.847845 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 10:17:57.848789 -- Made choice: Sword and moving to scene #1
+2023-01-10 10:17:57.848789 -- Added: 'Sword' to player inventory
+2023-01-10 10:17:57.851268 -- Testing Log @ 1673374677.8507724
+2023-01-10 10:27:00.453301 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 10:27:01.454245 -- Made choice: Sword and moving to scene #1
+2023-01-10 10:27:01.454245 -- Added: 'Sword' to player inventory
+2023-01-10 10:27:01.456229 -- Testing Log @ 1673375221.4562294
+2023-01-10 10:27:54.582338 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 10:27:55.583148 -- Made choice: Sword and moving to scene #1
+2023-01-10 10:27:55.583148 -- Added: 'Sword' to player inventory
+2023-01-10 10:27:55.585628 -- Testing Log @ 1673375275.5851328
+2023-01-10 10:28:01.190246 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 10:28:02.191133 -- Made choice: Sword and moving to scene #1
+2023-01-10 10:28:02.191133 -- Added: 'Sword' to player inventory
+2023-01-10 10:28:02.193609 -- Testing Log @ 1673375282.1936097
+2023-01-10 10:57:16.040265 -- Game initialized with name: gnfjgnfd and difficulty lives at: 5
+2023-01-10 10:57:18.735144 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 10:57:39.244375 -- Game initialized with name: gdknfdjng and difficulty lives at: 5
+2023-01-10 10:57:42.501636 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 10:57:58.963590 -- Game initialized with name: dfsd and difficulty lives at: 5
+2023-01-10 10:58:02.096733 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 10:58:05.182244 -- Made choice: Sword and moving to scene #1
+2023-01-10 10:58:05.182244 -- Added: 'Sword' to player inventory
+2023-01-10 10:58:07.072152 -- Arrived at: #1 - Outlying Lands - Player HP: 5
+2023-01-10 10:58:09.832571 -- Made choice: Plains and moving to scene #2
+2023-01-10 10:58:12.304739 -- Arrived at: #2 - plains_rt1 - Player HP: 5
+2023-01-10 10:58:24.498479 -- Arrived at: #0 - Armory - Player HP: 5
+2023-01-10 10:58:25.499342 -- Made choice: Sword and moving to scene #1
+2023-01-10 10:58:25.499342 -- Added: 'Sword' to player inventory
+2023-01-10 10:58:25.501823 -- Testing Log @ 1673377105.5013268
