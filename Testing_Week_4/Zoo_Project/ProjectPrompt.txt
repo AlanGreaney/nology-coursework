@@ -1,0 +1,33 @@
+flask app
+connect to elephant sql, endpoints, postman test get/post
+
+director of zoo. 
+inventory of animals
+table of enclosure = id, name
+table of id, animal, enclosure id, amount
+
+post add animals
+post add 
+get find enclosures
+get find animals
+
+1. test connection
+2. file for DB info
+3. test getting animal
+- string num, correct values
+4. test getting enclosure
+- string num, correct values
+
+make html report, with notes on whats happening. try logging thing
+
+bonus, add website for user to view park
+
+use fixtures to test
+
+There is also a Unit Testing with Python course on Pluralsight if you would like to dig into more functionality and uses cases a bit more
+
+
+
+
+
+#pluralsight notes:

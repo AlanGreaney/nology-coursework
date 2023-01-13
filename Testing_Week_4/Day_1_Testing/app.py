@@ -73,7 +73,7 @@ def fancy_flip():
 #will probably need to install flask again
 #pip install flask
 
-#set FLASK_APP=app.py
+#export FLASK_APP=app.py
 #flask --debug run" or "python -m flask run"
 
 #for output: #print(chance, file=sys.stderr)
