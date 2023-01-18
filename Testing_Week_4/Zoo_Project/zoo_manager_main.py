@@ -97,20 +97,6 @@ def create_app(connection=None, cursor=None, testing=False):
 
         return animals, 200
 
-    def sqlLoggingWrapper(cursor, query, params=None):
- 
-        if params == None:
-            sqlLogger.info("SQL Query being made: " + query + " - with no parameters.")
-            cursor.execute(query)
-        else:
-            sqlLogger.info("SQL Query being made: " + query + " - with the parameters: " + str(params))
-            cursor.execute(query, params)
-
-        if not testing:
-            sqlLogger.info("Committing SLQ")
-            connection.commit()
-
-
 
     @app.post("/api/edit_animal")
     def edit_animal():
@@ -130,6 +116,18 @@ def create_app(connection=None, cursor=None, testing=False):
 
         return {"message": "Animal ID #" + animalId + " - '" + animalName + "' now has - Amount: " + str(newAmount) + " / Enclosure ID: " + str(newEnclosureId)}, 200
 
+    
+    def sqlLoggingWrapper(cursor, query, params=None):
+        if params == None:
+            sqlLogger.info("SQL Query being made: " + query + " - with no parameters.")
+            cursor.execute(query)
+        else:
+            sqlLogger.info("SQL Query being made: " + query + " - with the parameters: " + str(params))
+            cursor.execute(query, params)
+
+        if not testing:
+            sqlLogger.info("Committing SQL")
+            connection.commit()
 
 
     return app

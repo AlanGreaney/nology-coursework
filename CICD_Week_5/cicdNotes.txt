@@ -1,0 +1,7 @@
+devops - improving the process of deploying - often automating
+continuous integration - regularly integrating, (like via github), easy for devs, with testing
+continuous delivery - regularly deploying
+plan code build test release deploy operate monitor
+
+http://3.139.231.116:8080/job/ALAN-GREANEY-CI/configure
+https://github.com/AlanGreaney/jenkinsTest1

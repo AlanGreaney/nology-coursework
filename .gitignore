@@ -7,3 +7,6 @@ Scripts/
 Lib/
 
 .env
+
+htmlcov/
+.coverage

@@ -98,63 +98,268 @@ devs dont want more work, tester thinks otherwise
 
 
 
+
+
 --- Testing throughout the Software Development Lifecycle ---
 
+-- Model types:
 SDLC - systematic plan
-basis for planing control, knows role, costs/speed
-model activity stage chronologically
+basis for planing control, knows role, costs/speed -> smooth progress, faster dev, cost low
+"a model  describes types of activity at each stage in project, how relate to each other logically and chronologically"
 
-waterfall -> fully sequential
-v model - testing during development
+Sequential:
+waterfall -> fully sequential = bad model tbh
+v model -> testing during development - early testing - different test level with each dev phase
 
-component (unit or module), integration (two+ components), system (whole, with everything together, with other stuff), acceptable(end user UAT, OAT operation acceptance testing)
+Iterative:
+time cycles, weeks, one group working on one while another doing another - small features per X weeks?
+Rational Unified Process (longer)
+Agile, Scrum (shorter)
+Kanban (short to long, but more fluid than agile)
+spiral (experimental, very flexible)
+
+-- Test Levels:
+like adding puzzle pieces together - 4 levels
+component (aka unit or module)(by devs), integration (two+ components/units)(subsystems, databases, infrastructure, microservices), system (whole, with everything together, with other stuff)(starts outside the system, end point, car anology), acceptance(end user UAT, OAT operation acceptance testing (backup/restore/load/performance) (system fits what customer wanted))
+objectives of testing: reduce risk, verify functional, confidence in system, find bugs, prevent defects @ higher levels
+
 Alpha = on dev
-beta = on user environment
+beta = on user environment (commercial off the shelf COTS)
 
-functional
+
+--Test Types
+Functional:
+feature function right, as expected.
 unit, integration, [system, ui]-acceptance testing
-non functional
+Coverage: % to which an application is exercised by tests
+Coverage-Gap: what isnt tested yet, %
+Non Functional:
 usability, performance, security
+UI, server load, stress test, endurance test, secure - pen test, white-hat hacking
 
-blackbox - unknown design
+whitebox: understands what is going on in systems, using technical docs to verify specific subsystem
+blackbox: don't know about software internals, only use Reqs to send input more or less as user, timings
+
+change-related testing:
+confirmation testing: was the bug fixed
+regression testing: did the fix break something else (automated is best)
+bug fix, new features, change to exisintg features, config/environment changes(changes not to app)
+
+can be multiple type of test at once, but one focus. any test type at any level
+
+Maintenance Testing:
+maintained over time. 
+Unplanned: bugs or failures (hotfix)(security)
+Planned: enhancements, operation/environment upgrades (new version of OS/program), retirement (sw unfit, needs new tech), new hardware/services
+
+Impact Analysis:
+What changes, where, which parts affected, likely affected
+needs new tests or modify old tests
+
+
 
 
 
 
 --- Static Testing ---
-testing before coding to an extent, reviewing requirements
-review work products - internal company stuff
-inefficiencies
-coding standards
+-- essentials
+testing before coding to an extent, reviewing requirements, before something goes wrong, tool driven evaluation of work products with structure. security testing.
+business req, architecture, user stories, code, web pages, user guides
+early bug finding easier and cheaper to remove, static testing = upfront investment
 
-review process - plan initiation prepare meet fix
-review types: informal, walkthrough, technical, inspection
-communicate, assign, evaluate, decision
 
-author, leader, facilitator, reviewer, scribe, management
+Static/dynamic = sameish objectives
+- assess quality, identify defects, but find different type of defects
+inefficient algorithms, database structures, cohesion
+static: coding standards, incorrect interface specifications, security vulnerabilities, gaps in test coverage
+
+-- Review Process
+find issue that might lead to defects
+potential defect / recommendation / question
+Informal - no defined process, no documents
+Formal - team participation, official flow, documentation
+4 review types = informal, walkthrough (find defects), technical review, inspection (review work product)
+planning review: 30%, scope? - purpose, what review, quality characteristics - review type, activities, roles, checklists
+Size of document <> checking rate <> hours spent
+entry/exit criteria - is it ready? - less than X defects per Y
+individual review: question, missing, recommendations
+issue analysis - accept, accept w/ changes,reject major needed
+communicate defects, assign owner ship, evaluate, make decision
+fixing and reporting: create defect reports, fix defects, communicate defects. update defect status, gather metrics, exit creteria met, accept work product
+review process: plan, initiate, prepare, meet, fix
+Author: creates work product, addresses found issues
+Review Leader: overall responsibility, participants, schedule
+Facilitator: runs meeting, mediates viewpoints
+Reviewers: technical, project staff, business expert (functionality, usability)
+Scribe: collate issues found, records new issues
+Management: overall review planning, review strategy, staff budget/time, cost effective, control decisions
 lfarms
+
+-- Review Types
+Informal Reviews - agile, detect defects, generate ideas, buddy dev, no process, limited docs
+Walkthrough - author prepares and presents, aim to improve product, technique, style - large audience, low participant demand - important issues found, scenarios, dry runs, simulators. find defects, improve. formal to informal, maybe checklists. logs/defects
+technical reviews - gain consensus, mix of small group with varied background. formal - plan, initiate, individual review (prepare), issue communcation, fix + report
+software inspection - very defined process. small group, multi roles, peers author or tech expert. checklist checking. 
+higher risk = more formal/technical
+
+-- Applying Review Process
+Have clear objects, choose appropriate review types, suitable review techniques
+chunking for large documents, adequate notice + time to prepare, management support (upfront investment)
+manager: involve right people in review, values testers as reviewers, attention to detail, concenrtation
+people related: defects acknolwedged (dont take it personal), well managed, atmosphere, training
+review techniques:
+adhoc - informal, one off, little prep, rely on reviewer expertise, little guidance, sequential read, duplicate issues common
+checklist-based - checklist provided to reviewers based on previous things, systematic, typical defects covered, but should look outside of objectives. derived from rules
+scenarios/dryruns - structured guidelines on reading based on expected usage, better than simple checklists, but shouldnt feel contrained, create paths of use
+role-based - experienced user, novice user, developers/testers - basically act as a certain end user
+perspective-based (reading) - software reading, devs learn gradually, less reliant on individual, create work products. concrete instructions to uncover defects
+
+
+
+
+
 
 
 
 
 
 --- Test Techniques ---
-transition testing
-whitebox blackbox
-actor = thing that interacts, user/hardware/api
-statemnt testing / flow charts / direct things from code, just the ifs
-decision - all possible outputs
-
-error - using experience to find issues
-checklist - conditions list, varied input at times
-exploratory testing - informal, documenting, review
+selecting technique:
+time&budget, (experience = easier, cheaper, lest formal, but might miss)
+regulatory/contracts = documentation
+available documentation
+tester knowledge/skill
+sdlc model (formality), system complexity (more varied techniques)
 
 
+-- Black Box
+- basis: user stories, use cases, req documents
+- test cases: detect deviations between req and implementation
+- coverage: based on items tested as well as technique applied
+- not performed at component level
+based on requirements, might change req. static and dynamic.
+focus on only input/output, not knowing internals
+
+Equivalence Partitioning:
+"all values in an equivalence partition should processed in same way" in 5-100, need 4 95 101, 1 value per partition.
+less time taken, but less checking. not always feasible to check. number line good for idea of checking
+- reduce test case, all levels, coverage by number of equivalence paritions tested, partitions identify any element related. invalid partitions not tested at same time.
+
+Boundary Value Analysis:
+Ordered data only. extends Equivalence Partitioning but checks edge cases
+Lowest/highest per boundary area.
+2 point analysis - around boundary
+3 point analysis - includes the boundary itself
+
+- defects more likely to occur near boundaries. coverage = boundary values / boundary tests. all test levels. must be ordered/numeric data
 
 
---- Test Management ---
-SPACE
-risk based
+Decision Table Testing:
+Condition 1
+Condition 2
+Condition 3
+Action
+
+Wide variety. actions = observable results. start with most negative
+display complex logic, finds many conditions, enough test cases to cover every combination of conditions. coverage = decision rules tested . decision rule = particular combination of conditions
+all test levels
+
+
+
+State Transition Testing:
+4 components: states software is in, transitions (between states), events (causes transition), actions
+only shows valid transitions
+State Transition table: like decision table, but between states
+used for menu apps/screen navigiation - bad for large systems with non sequential inputs
+
+
+Use Case Testing:
+Use case: specific way of interacting with a system
+blends with acceptance tests
+Preconditions: conditions met for use case test to work successfully, ie logged in, assigned class
+post conditions= conditions met after use case test completed, ie email notificaiton, records
+
+Actors: users, extenral hardware, other systems (api)
+Subject: component/test object that is interacted with
+Use case scenarios: correct but also wrong/varied cases, like unassigned or server down, ie. exceptional scenarios
+
+
+-- White Box
+- basis: includes source of info regarding structure
+- performed by devs
+- based on number of items tested
+- performed at all levels (mostly component) (dyn/static)
+
+Statement Testing:
+decision points @ if statements.
+executable statement: thing that happens
+statement test = exercises all executable statements
+flow charts good
+
+Decision Testing:
+exercises all decision points instead of the statements. finds outcome of each.
+100% statement cov != 100% decision cov (usually)
+
+
+
+-- Experience Based
+- past experience of: tester, dev, user, stakeholders
+- expected use of product (ie children)
+-- basis knowledge of many
+-- expected use + likely defects
+-- combined with white-box/black-box dynamic
+
+
+Error Guessing:
+creating tests to expose failures that are likely to occur - attempts to predict occurence of defects. more methodically using lists
+ie touchscreen for kids
+contradictory system requirements/documentation defects
+new technologies tester may know
+integration with 3rd party services
+cache issues
+
+Error Guessing Data Source:
+Past experience, general causes of software failure, defect & failure data from previous projects
+
+
+Checklist based testing:
+checklists can result in higher test coverage
+less specific checklist can increase variability depending on testing, lower repeatability
+past experience, general causes of failure, defect/failure data, user data (performance)
+
+- checklists define test conditions
+- checklists may be reused (with modifciation)
+- various test types
+- increase test coverage, reduce repeatability)
+
+Exploratory Testing:
+informal
+tests designed, executed, logged, evaluated during execution - documented
+explore -> document -> review -> ...
+
+- Session based: defined time box, test charter guiding, activities documented in testing sheets
+
+Useful: limited documentation (since less formal), time and budget constraints, best combined with other techniques
+
+- not predefined tests
+- commonly used in reactive test strategies
+- makes use of time boxed sessions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

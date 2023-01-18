@@ -24,6 +24,16 @@ url = os.getenv("DATABASE_URL")
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
+#https://pypi.org/project/pytest-cov/
+#branch coverage too
+
+#coverage run --source=zoo_manager_main.py -m pytest -v 
+#pytest -v --html=report.html --cov --cov-report=html
+#pytest -v --html=report.html --cov --cov-report=html --cov-branch
+#https://stackoverflow.com/questions/34651379/how-to-make-py-test-cov-skip-virtualenv-directory
+#pytest --cov=app tests/
+#coverage report -m
+
 class TestZooManager:
 
     #setUp()
@@ -88,11 +98,6 @@ class TestZooManager:
     @pytest.fixture()
     def client(self, app):
         return app.test_client()
-
-
-    @pytest.fixture()
-    def runner(self, app):
-        return app.test_cli_runner()
 
     def test_database_setup(self, setup_database):
         conn, cursor = setup_database
@@ -183,7 +188,7 @@ class TestZooManager:
         logger.info("Converting Response to Dictionary Data")
         response_dict = ast.literal_eval(response.data.decode("UTF-8"))
         logger.info("Verifying correct " + animalToTest.capitalize() + " Animal ID corresponds to proper [Amount, Enclosure]")
-        assert response_dict["1"] == [3, 1] #[id], [amount, enclosure]
+        assert response_dict["1"] == [12, 1] #[id], [amount, enclosure]
         assert response_dict["7"] == [4, 4]
 
 
