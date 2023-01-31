@@ -1,0 +1,142 @@
+Requirements Gathering:
+
+	Business:
+		Procure server to run database. 
+
+	Design:
+		Decide on database table design
+		Decide on format for data entry and retrieval
+		
+		Constraints/Problems/Edge Cases:
+			Allow for changing amount of animals when new ones born/bought/loaned, or others passed/transferred.
+			Allow multiple animals in a single enclosure for mixed areas
+			If a single type of animal is located in multiple enclosures, how should this be presented to the user
+
+	Knowledge:
+		Find the proper names of animals and number of each within the zoo. Use scientific or natural names.
+		Decide on consistent term to name the enclosures, whether by "fun" name in the park or a more scientific term, such as "Australian Lands" / "Prarieland", or "Forest" / "Smokey the Bear's Wild Outdoors". 
+
+	Usage:
+		User can lookup an animal by name or id, and see which enclosure it is in
+		User can lookup an enclosure by name or id, and see which animals and how many are in it
+		User can add or remove animals from the list
+		User can change the amount of animals in an enclosure, or move them to a different enclosure
+
+
+
+Example User Stories:
+
+	- As a developer, I want to be able to test that new data is being added to the Zoo database correctly.
+	- As a developer, I want to be able to test that data is being received from the Zoo database correctly.
+	- As a product manager, I want the ability to add new features in the future without major changes to the original code
+	- As a product manager, I want a clear to read output report to monitor the status of the program
+	- As a QA engineer, create a grouping of tests that lead up to covering all major use cases for the end-user.
+	
+Example Test Cases:
+
+	- Verify that adding new data to the database is properly inserted
+	- Verify retrieving expected data works
+	- Check performance by determining length of test compared to a baseline. Ensure system does not bog-down as more data is added to the database
+	- Verify logging of changes to database is working (fixture)
+	
+	
+Test Summary:
+	Feature: Database Connection
+		Environment: Development
+		Duration: 0.5 hours
+		Coverage: 95%
+		Result: Pass
+		
+		Case: Verify the connection to the database is added and stable
+			- Result: Pass
+			- Notes: Using fixture, ensured the connection is created between database and application. Added sample data and verified the tables are setup properly.
+		
+	Feature: Database Logging
+		Environment: Development
+		Duration: 0.5 hours
+		Coverage: 95%
+		Result: Pass
+		
+		Case: Verify database logging is working by executing a test statement, and verifying it is in the logs
+			- Result: Pass
+			- Notes: Using database wrapper
+		
+	Feature: Adding new animal to the zoo
+		Environment: Development
+		Duration: 0.5 hours
+		Coverage: 90%
+		Result: Pass
+		
+		Case: Verify adding a new animal to the zoo successfully completes adding a new entry to the database.
+			- Result: Pass
+			- Notes: Tested using fixture, added an animal to the database via POST and verified its existence
+		
+	Feature: Adding new enclosure
+		Environment: Development
+		Duration: 0.5 hours
+		Coverage: 90%
+		Result: Pass
+		
+		Case: Verify adding a new enclosure to the zoo successfully completes adding a new entry to the database.
+			- Result: Pass
+			- Notes: Tested using fixture, added a random enclosure to the database via POST and verified its existence
+			
+		Case: Verify attempting to add an already existing enclosure
+			- Result: Pass
+			- Notes: Tested using fixture, added a random enclosure to the database via POST and a non-addition response
+			
+	Feature: Flask Application
+		Environment: Development
+		Duration: 0.5 hours
+		Coverage: 95%
+		Result: Pass
+		
+		Case: Test Flask Application is properly setup, connectable, and base-route returns data
+			- Result: Pass
+			- Notes: Via Fixture and GET
+			
+	Feature: Retrieving Animal Details
+		Environment: Development
+		Duration: 0.5 hours
+		Coverage: 95%
+		Result: Pass
+		
+		Case: Verify retrieving animal information via Name
+			- Result: Pass
+			- Notes: via GET
+
+	Feature: Retrieving Enclosure Details
+		Environment: Development
+		Duration: 0.5 hours
+		Coverage: 95%
+		Result: Pass
+		
+		Case: Verify retrieving enclosure information via Name
+			- Result: Pass
+			- Notes: via GET
+			
+		Case: Verify retrieving enclosure information via Id
+			- Result: Pass
+			- Notes: via GET
+
+
+	Feature: Modifying Animal Details
+		Environment: Development
+		Duration: 0.5 hours
+		Coverage: 95%
+		Result: Pass
+		
+		Case: Verify editing an animal's count and/or enclosure
+			- Result: Pass
+			- Notes: Using fixture, add an animal to the database. then, edit it's count of animals, ensure count changes properly in GETs
+			
+		Case: Verify editing an animal's count
+			- Result: Pass
+			- Notes: Using fixture, add an animal to the database. then, edit it's current enclosure ID, ensure enclosure changes properly in GETs
+		
+
+		
+		
+		
+		
+	

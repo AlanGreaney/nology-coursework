@@ -53,10 +53,15 @@ def fancy_flip():
     """
 
 
+#print("hello?", file=sys.stderr)
+#print("hello?", file=sys.stderr)
+#print("hello?", file=sys.stderr)
+#print("hello?", file=sys.stderr)
+#print("hello?", file=sys.stderr)
+#print("hello?", file=sys.stderr)
 
 
-
-
+#git checkout -b FirstLast_Dev
 
 #make env:
 #python -m venv venv
@@ -73,7 +78,7 @@ def fancy_flip():
 #will probably need to install flask again
 #pip install flask
 
-#set FLASK_APP=app.py
+#export FLASK_APP=app.py
 #flask --debug run" or "python -m flask run"
 
 #for output: #print(chance, file=sys.stderr)

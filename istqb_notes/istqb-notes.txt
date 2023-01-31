@@ -352,9 +352,278 @@ Useful: limited documentation (since less formal), time and budget constraints, 
 
 
 
+--- Test Management ---
+-- The Test Manager
+- writes the rest plan
+- no test: customer complaints, bottom line, damage to reputation
+Test Policy: why/what test - test process, how evaluated, quality levels, process improvement - early activities, estimates of effort, test on mirror of production env
+sapce - scope, people, approach, criteria, environment 
+Test Plan: how test - test objectives
+1 analytical - risk based
+2 model based - design on model, growth model, business model, state model
+3 methodically - predefined tests, common failure types, checklist of quality characteristics
+4 process compliant - tests based on external/industry standards, process documentation
+5 directed (consultative) - advice from experts, external to test team
+6 regression averse - reuse test are, auto tests, test suites
+7 reactive - little preplanning, simultaneous design and execution, exploratory testing
+
+Estimating:
+When start testing? early as possible.
+Estimating
+prepare analysis and design, writing
+implementation, automate test
+evaluate results, bugs
+test levels, test cycles
+
+schedule test activities, coordinate product owner, manager
+write test plan, keep updated "living document"
+
+Where test: proper test environment i.e. production equivalent, or at the desk
+- prod - problems recreated, performance realistic, live cust dater BUT expensive, user license, data sanatized
+
+how test carried out:
+manual + automated, acquire resources (right people), support tool selection
+defect management system, configuration management (server settings, version control), metrics of testing
+progress monitored, exit criteria, + report, continually adapt
 
 
 
+-- The Tester
+Analyze, review, assess test basis. focus on X. document test conditions. capture traceability
+design test, reserve equipment, coordinate with sys admin
+identify test conditions
+design and implement test cases/procedures, build test DB, prepare data
+create schedule, execute tests + document/tickets, use correct tools, automate what they can
+ISO/IEC Standard 25010 - describes a classification of software product quality characteristics
+Performance, Efficiency, reliability, compatibility, usability, portability, + security
+roles: technical test analyst, test automation engineer, performance tester, security tester
+OAT - operational acceptance (testing)
+UAT - user acceptance
+ST - system testing - independent
+unit testing - devs
+Independent testing: can find defects in own work, degree of tester independence, but doesnt replace familiarity 
+1: devs own code
+2: some independent testers
+3: independent test team
+4: business testers (pro)
+5: external, independent testers (outsource/insource)
+
+Pro:
+recognize different failures, varify/challenge/disprove assumptions
+Con:
+isolation from devs, lose responsibility for quality, testers seen as bottleneck, testers lack critical info
+
+
+-- Product Risk Analysis
+Type of risk:
+Product Risk:
+Software not performing to specification, ignores customer needs, bad system architecture, wrong computations, loops coded incorrectly, slow response times, poor user experience
+product risk = quality risk
+
+Project risk (internal): 5 (project issues, organizational, political, technical, supplier)
+project issue (delay in delivery), inadequate funding, late changes, organizational issues (project resourcing (new software), personal issues, conflicting business priorities (people on multiple projects))
+office politics, bad attitude towards testing, failure to improve testing practices, poor communication of testing
+technical issues: poor requirement, existing constrains, test env not ready, data migration late, variably quality of work products, technical debt (accumulated defects)
+supplier issues: 3rd party fails to deliver, contractual issues
+
+Getting back on track:
+- test manager handles, hire contractors, work overtime, improve estimating, manage changes better
+
+
+Risk based testing:
+Impact: harm caused if software fails, from 1 to 5, all stakeholders provide input
+Likelihood: chance of failure, 1 to 5, technical reasons prevail
+Risk level of req = impact x likelihood
+(remember airline example)
+
+Risk: helps focus effort
+Adverse events less likely, impact reduced
+testing = risk mitigation
+pro-active strategy
+choose test techniques, select levels/types of testing, depth of testing, prioritize testing, additional activities required
+
+
+-- Managing Defects
+How to write defect report:
+- like 20 different terms for flaw/bug/defect
+- error -> fault/defect/bug -> failure "Defect is a manifestation of an error in the software"
+finding defects is a test objective. defect reports aid resolution
+start new log, analysis of why happened (was data/server problem, or actually bug), track, confirm fix
+defects found: during coding, static analysis, dynamic testing, or during product use
+defects in: code, software, documentation
+defect report: provides information to recreate/resolve, feedback on quality, catalyst for improvement
+defect report: id, title, summary, date, organization, author, id of test item, status (new/open/closed/etc), lifecycle phase, test env, detailed desc (expected/actual results), change history references, global issues, conclusions/recommendations/approvals
+new -> open -> fixing -> ready -> tested -> closed + resolution info --- (reopen, might recycle)
+
+
+-- How to write a test plan
+Purpose of test plan: test policy (why test), test strategy (what test), test plan (how test)
+development lifecycles and methods, scope of testing, test objectives, risks, constraints, testability (ease), availability (testers, hardware)
+master test plan -> unit test, system test, uat plan
+1 scope, 2 approach, 3 integration, 4 who/what/how, 5 scheduling, 6 metrics, 7 budgeting, 8 templates
+test planning: contiuous: initial draft issued, feedback, test plan updated
+
+Test Stragtegy+Approach (space vs financial example)
+See line 362 for types
+combine strategies
+
+-- Entry/Exit Criteria
+Entry: to start
+definition of ready
+stories/models/strategies, test env ready (database, software ready)
+
+Exit: Definition of done
+planned test done, coverage level done, unresolved defects, remaining defects low, level of quality characteristics 
+- might end early - budget, schedule, product to market
+
+
+Applying Estimation Techniques:
+Ideal: High, Medium, Low Priority - however, might be dependencies + balance efficiency
+
+Test Effort Influence Factors (4):
+Product - risks, test basis quality, size/complexity, quality characteristics, documentation, legal/regulatory/contracts
+People - skills, knowledge, experience, cohesion/leadership
+Development - organizational maturity, dev model, test approach, tools used, test process (like reviews), time pressure
+Test results - number + severity of defects, amount of rework required
+
+Test Estimation Techniques:
+longer than you expect
+- metrics based estimation - burndown chart, defect removal model
+- expert based estimation - planning poker (Fibonacci), wideband delphi (group of experts, lots of interaction - 3 to 7 people chosen, kick off meeting, preparing, estimation session, assemble tasks, review results)
+Include all test activities, test preparation not just execution, number of test cycles
+uncertainty: agile teams build first, present range + confidence, incremental funding
+
+
+
+-- Keeping track of progress:
+Test Monitoring:
+Metrics: Work done, case execution, detect info, coverage (code, user stories, reqs), task completion, costs
+metrics used in: test approach, quality, progress
+gather metrics and make visible
+
+Test Control:
+Think of air traffic controller
+Reprioritize testing, change schedule, add more resources
+
+Test Reporting:
+Progress Report
+Summary Report
+
+- summary of whats performed, information on occurances, deviations of planes, status of testing/quality of product, factors that block progress, metrics, residual risks, reusable test work products
+Also: status of activities, factors of block removed, planning testing for future, quality of test object 
+
+Tailor report to audience
+
+Severity - impact on business
+business - how soon to fix (may not be as easy, or available to fix right away)
+
+
+
+
+
+
+
+
+- Tool Support for Testing
+Tool helps in testing process - tool = do math, automate repetitive/significant effort tasks - support manual activities - some things humans do better
+more consistent testing, higher level of reproducibility
+some activities cannot be executed manually
+
+Probe Effect: the effect on the system by measurment instrument when component or system being measured - tool might slow down program while running, taking data, or maybe doing coverage reports
+
+Classing tool:
+Pricing - subscription, perpetual
+License - opensource, commercial
+
+- Management of testing
+testware - all artifacts produced during test process
+management of testing process - test planning, exeuction, etc
+management of testing - just the tests
+management of tests/activities, scheduling text execution and logging results, linking tests/results/defects to requirements or other sources, creating reports from metrics
+often have interface to other tools like bug tracking or code management
+requirement management tools - req <--> test cases, track coverage, find ambiguities
+defect management tools - desc, severity, env, etc
+configuration mngmnt - git
+CI tools - jenkins (more dev oriented) - quick feedback about quality of product
+
+- static testing
+manual review, tool evaluation of code
+static analysis tools - by devs - prevent runtime errors, enforce coding standards, find security gaps, checking code as typed
+quality gate
+
+- test design and implementation
+model based testing - model based on project requirements (flowcharts) - lots of test cases, find gaps in reqs, assist in automation
+data prep tools - need to use unique data andor large amount of data - randomize, generate, anonymous data - good for load test
+
+- test execution
+test execution tools - record exact steps, add assertions, replay. hard to maintain, little app control. better to use more in depth programming one.  logging, execution values, reports
+coverage tools in here
+test harnesses - stubs, drivers, replace part of system (devs)
+
+- performance measurement/dynamic analysis
+testing tool = everything that can help
+generate load and simulate scenarios, measure response time, find bottlenecks
+dynamic analysis - memory leaks, time dependencies, pointer arithmetic errors, require code to be running
+
+- specialized testing needs
+non functional characteristics - embedded system performance testing / dynamic analysis tools for security issues
+
+
+
+-- Benefits/Risks of Test Automation
+benefits - time reduced, coverage increased, reduces manual work, greater consistency/repeatability, objective assessment, easier access to testing info
+
+Risks - expectations unrealisitic, time/cost/effort + time/effort for benefit + effort to maintain - all may be underestimated
+      - may be replied upon too much, version control neglected, issues between tools neglected, tool vender out of business or bad support, opensource abandoned, new tech not supported, no clear owner of tool
+
+	  
+
+-- Selecting tools
+assese organization maturity, evaluate against requirements/objectives, identify reqs/plan internal implementation
+- identify where tool will support, like safety critical
+- estimation of costbenefit ratio
+- evaluation of vender or open source network
+- additional pros/cons, trial period
+- compatibility of tool with test object, integration, training needs
+
+test capture tool methods:
+- capturing - good stating point, no programming knowledge / cannot scale, hard coded, unstable when unexpected event, high maintenance
+- datadriven - script draws from data. highly varied. programming, high effort, well managed
+- keyword - datafiles used in control script to use support scripts, additional tests easily added, test scripts added by non programmings, tool independent automated tests
+
+
+
+-- Introducing tools
+- more comprehensive selection criteria, small scale study to understand tool
+
+pilot project:
+proof of concept, varies, set objectives ie can solve a problem?
+gain in dpeth knowledge of tool, evaluate how fits, standards use/maintaining tool, reasonable cost of benefits, understanding metrics/reports desired by tool
+if objectives not met: not being used right, or not right
+
+-success factors of tool: rolling out incrementally, adapting/improving processes to fit within tool, provide training/coaching/mentoring for tool users, defining use guidelines
+- way to gather info, monitor use/benefits, support to user
+
+
+
+
+
+
+Other notes:
+"Nonfunctional Requirements (NFRs) define system attributes such as security, reliability, performance, maintainability, scalability, and usability. They serve as constraints or restrictions on the design of the system across the different backlogs."
+
+Function:
+solutions defined by user stories. basically the exact cases to be covered
+
+why is usability testing non-functional? while it may do XYZ, it may be difficult/slow/annoying/unintuitive
+
+
+use case 3 outcomes
+https://www.softwaretestinghelp.com/use-case-testing/
+
+
+
+https://docs.google.com/spreadsheets/d/1UJtBeg4DZQJWaSWwPA_2Iwf6sQoNv5UoNOLWoeRcNeo/edit#gid=0
 
 
 

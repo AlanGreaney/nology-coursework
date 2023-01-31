@@ -1,0 +1,29 @@
+flask
+mongodb
+pytest
+
+crud app
+create retrieve update delete
+
+add unit tests/etc
+
+parts inventory DB
+parts with wafer machines - nuts bolts washers lasers etc electro combabulator
+
+postman mainly
+
+
+part _id (query only)
+part name
+part number
+quantity (stock)
+backorder true/false
+cost
+manufacturer from
+weight (kg)
+dimensions (mm)
+age for shelf life / maintenance
+expiration time (time)
+systems used in [filter, fan, etc]
+
+6 tests

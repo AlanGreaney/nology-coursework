@@ -1,0 +1,130 @@
+[
+	{
+		"_id": {
+			"$oid": "63d2b6260697aff60c8fcf9a"
+		},
+		"name": "Square Head Bolt",
+		"partNum": {
+			"$numberLong": "39"
+		},
+		"quantity": {
+			"$numberLong": "530"
+		},
+		"desiredReserve": {
+			"$numberLong": "600"
+		},
+		"cost": {
+			"$numberDouble": "0.5"
+		},
+		"manufactuerer": "uxcell",
+		"weight": {
+			"$numberDouble": "0.06803886"
+		},
+		"dimensions": "12.7d 50.8l",
+		"stockedDate": {
+			"$date": {
+				"$numberLong": "1669852800000"
+			}
+		},
+		"shelfLife": {
+			"$numberLong": "365"
+		},
+		"systems": ["scanner", "twinscan", "euv"]
+	},
+	{
+		"_id": {
+			"$oid": "63d2b6260697aff60c8fcf9c"
+		},
+		"name": "High Power Laser",
+		"partNum": {
+			"$numberLong": "65"
+		},
+		"quantity": {
+			"$numberLong": "5"
+		},
+		"desiredReserve": {
+			"$numberLong": "10"
+		},
+		"cost": {
+			"$numberDouble": "4000"
+		},
+		"manufactuerer": "iPG Photonics",
+		"weight": {
+			"$numberDouble": "34.06803886"
+		},
+		"dimensions": "500d 100h 350w",
+		"stockedDate": {
+			"$date": {
+				"$numberLong": "1318230000000"
+			}
+		},
+		"shelfLife": {
+			"$numberLong": "365"
+		},
+		"systems": ["scanner", "twinscan", "euv"]
+	},
+	{
+		"_id": {
+			"$oid": "63d2b6260697aff60c8fcf9d"
+		},
+		"name": "Retro Encabulator",
+		"partNum": {
+			"$numberLong": "42"
+		},
+		"quantity": {
+			"$numberLong": "1"
+		},
+		"desiredReserve": {
+			"$numberLong": "0"
+		},
+		"cost": {
+			"$numberDouble": "5600000"
+		},
+		"manufactuerer": "Rockwell",
+		"weight": {
+			"$numberDouble": "3400.06803886"
+		},
+		"dimensions": "609.6d 1524h 3048w",
+		"stockedDate": {
+			"$date": {
+				"$numberLong": "1669852800000"
+			}
+		},
+		"shelfLife": {
+			"$numberLong": "3650"
+		},
+		"systems": ["self"]
+	},
+	{
+		"_id": {
+			"$oid": "63d2b6260697aff60c8fcf9e"
+		},
+		"name": "Electro-Pneumatic Control Box",
+		"partNum": {
+			"$numberLong": "342"
+		},
+		"quantity": {
+			"$numberLong": "3"
+		},
+		"desiredReserve": {
+			"$numberLong": "5"
+		},
+		"cost": {
+			"$numberDouble": "1500"
+		},
+		"manufactuerer": "General Kinematics",
+		"weight": {
+			"$numberDouble": "350.54"
+		},
+		"dimensions": "60.6d 124h 308w",
+		"stockedDate": {
+			"$date": {
+				"$numberLong": "1318230000000"
+			}
+		},
+		"shelfLife": {
+			"$numberLong": "3000"
+		},
+		"systems": ["injector", "euv"]
+	}
+]

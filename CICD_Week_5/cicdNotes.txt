@@ -5,3 +5,7 @@ plan code build test release deploy operate monitor
 
 http://3.139.231.116:8080/job/ALAN-GREANEY-CI/configure
 https://github.com/AlanGreaney/jenkinsTest1
+
+ubuntu = username
+ssh -i AlanGreaney-ASML-Key.pem ubuntu@3.145.33.253
+might need to change perms on key file - chmod 400 (read only)

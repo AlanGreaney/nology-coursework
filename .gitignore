@@ -10,3 +10,4 @@ Lib/
 
 htmlcov/
 .coverage
+mongopass.py
